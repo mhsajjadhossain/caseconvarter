@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <section class="mainAppBody">
+        <div class="container shadow px-5 py-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appInner">
+                        <h1 class="text-capitalize">The Ultimate Case Converter Tool</h1>
+                        <!-- main input field start here -->
+                        <textarea class="form-control" id="caseInputFeild"
+                            placeholder="Type or paste your text here ...."></textarea>
+                        <!-- main input field end here -->
+                        <!-- all action button wrapper start -->
+                        <div class="action_btn_wrapper pt-3">
+                            <button class="btn btn-primary actionBtn text-uppercase" data-action="uppercase">To uppercase</button>
+                            <button class="btn btn-primary actionBtn text-lowercase" data-action="lowercase">To lowercase</button>
+                            <button class="btn btn-primary actionBtn text-capitalize" data-action="capitalize">To
+                                capitalize</button>
+                            <button class="btn btn-primary actionBtn" data-action="sentence">To Sentence case</button>
+                            <button class="btn btn-primary actionBtn" data-action="inverse">toINVERSE</button>
+                            <button class="btn btn-primary actionBtn" data-action="clear">clear</button>
+                        </div>
+                        <!-- all action button wrapper ends -->
+
+                        <!-- display results wrapper starts here -->
+                        <div class="displayOutWrap mt-3 d-flex align-items-center">
+                            <!-- single display block start here -->
+                            <div class="single_dis">
+                                <span class="disTitle">Letter Count:</span>
+                                <strong class="letterOutputDisplay"></strong>
+                            </div>
+                            <!-- single display block ends here -->
+
+                            <!-- single display block start here -->
+                            <div class="single_dis pl-3">
+                                <span class="disTitle">Word Count:</span>
+                                <strong class="wordOutputDisplay"></strong>
+                            </div>
+                            <!-- single display block ends here -->
+
+                            <!-- single display block start here -->
+                            <div class="single_dis pl-3">
+                                <span class="disTitle">Line Count:</span>
+                                <strong class="lineOutputDisplay"></strong>
+                            </div>
+                            <!-- single display block ends here -->
+
+                        </div>
+                        <!-- display results wrapper ends here -->
+                        <p class="text-monospace text-info mt-2">Developed By M.h Sajjad Hossain Ripon.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
