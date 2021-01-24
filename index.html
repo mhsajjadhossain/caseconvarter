@@ -58,7 +58,7 @@
                         </div>
                         <!-- display results wrapper ends here -->
                         <p class="text-monospace text-info mt-2">Developed By M.h Sajjad Hossain Ripon.</p>
-
+                        <p class="text-monospace text-info mt-2">Total Visited: <b class="text-dark" id="visits"></b></p>
                     </div>
                 </div>
             </div>
@@ -71,6 +71,16 @@
 
 
     <script src="src/js/app.js"></script>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.countapi.xyz/hit/testRepo.com/visits");
+        xhr.responseType = "json";
+        xhr.onload = function() {
+            document.getElementById('visits').innerText = this.response.value;
+
+        }
+        xhr.send();
+    </script>
 </body>
 
 </html>
