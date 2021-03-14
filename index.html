@@ -10,7 +10,34 @@
 </head>
 
 <body>
-    <section class="mainAppBody">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">WebToolRepo.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Case Converter <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pass.html">Password Generator</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar start -->
+
+
+
+
+    <section class="mainAppBody mt-5">
         <div class="container shadow px-5 py-5">
             <div class="row">
                 <div class="col-lg-12">
@@ -22,8 +49,10 @@
                         <!-- main input field end here -->
                         <!-- all action button wrapper start -->
                         <div class="action_btn_wrapper pt-3">
-                            <button class="btn btn-primary actionBtn text-uppercase" data-action="uppercase">To uppercase</button>
-                            <button class="btn btn-primary actionBtn text-lowercase" data-action="lowercase">To lowercase</button>
+                            <button class="btn btn-primary actionBtn text-uppercase" data-action="uppercase">To
+                                uppercase</button>
+                            <button class="btn btn-primary actionBtn text-lowercase" data-action="lowercase">To
+                                lowercase</button>
                             <button class="btn btn-primary actionBtn text-capitalize" data-action="capitalize">To
                                 capitalize</button>
                             <button class="btn btn-primary actionBtn" data-action="sentence">To Sentence case</button>
@@ -58,15 +87,13 @@
                         </div>
                         <!-- display results wrapper ends here -->
                         <p class="text-monospace text-info mt-2">Developed By M.h Sajjad Hossain Ripon.</p>
-                        <p class="text-monospace text-info mt-2">Total Visited: <b class="text-dark" id="visits"></b></p>
+                        <p class="text-monospace text-info mt-2">Total Visited: <b class="text-dark" id="visits"></b>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-
-
 
 
 
@@ -75,7 +102,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.countapi.xyz/hit/testRepo.com/visits");
         xhr.responseType = "json";
-        xhr.onload = function() {
+        xhr.onload = function () {
             document.getElementById('visits').innerText = this.response.value;
 
         }
