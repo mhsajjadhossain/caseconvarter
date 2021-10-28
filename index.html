@@ -1,113 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="src/css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">WebToolRepo.</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">WebToolRepo.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Case Converter <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pass.html">Password Generator</a>
-                    </li>
-
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Case Converter <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pass.html">Password Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pass.html">Vs Snippet Generator</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- navbar start -->
 
-
-
-
     <section class="mainAppBody mt-5">
-        <div class="container shadow px-5 py-5">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="appInner">
-                        <h1 class="text-capitalize">The Ultimate Case Converter Tool</h1>
-                        <!-- main input field start here -->
-                        <textarea class="form-control" id="caseInputFeild"
-                            placeholder="Type or paste your text here ...."></textarea>
-                        <!-- main input field end here -->
-                        <!-- all action button wrapper start -->
-                        <div class="action_btn_wrapper pt-3">
-                            <button class="btn btn-primary actionBtn text-uppercase" data-action="uppercase">To
-                                uppercase</button>
-                            <button class="btn btn-primary actionBtn text-lowercase" data-action="lowercase">To
-                                lowercase</button>
-                            <button class="btn btn-primary actionBtn text-capitalize" data-action="capitalize">To
-                                capitalize</button>
-                            <button class="btn btn-primary actionBtn" data-action="sentence">To Sentence case</button>
-                            <button class="btn btn-primary actionBtn" data-action="inverse">toINVERSE</button>
-                            <button class="btn btn-primary actionBtn" data-action="clear">clear</button>
-                        </div>
-                        <!-- all action button wrapper ends -->
+      <div class="container shadow px-5 py-5">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="appInner">
+              <h1 class="text-capitalize">The Ultimate Case Converter Tool</h1>
+              <!-- main input field start here -->
+              <textarea
+                class="form-control"
+                id="caseInputFeild"
+                placeholder="Type or paste your text here ...."
+              ></textarea>
+              <!-- main input field end here -->
+              <!-- all action button wrapper start -->
+              <div class="action_btn_wrapper pt-3">
+                <button
+                  class="btn btn-primary actionBtn text-uppercase"
+                  data-action="uppercase"
+                >
+                  To uppercase
+                </button>
+                <button
+                  class="btn btn-primary actionBtn text-lowercase"
+                  data-action="lowercase"
+                >
+                  To lowercase
+                </button>
+                <button
+                  class="btn btn-primary actionBtn text-capitalize"
+                  data-action="capitalize"
+                >
+                  To capitalize
+                </button>
+                <button
+                  class="btn btn-primary actionBtn"
+                  data-action="sentence"
+                >
+                  To Sentence case
+                </button>
+                <button class="btn btn-primary actionBtn" data-action="inverse">
+                  toINVERSE
+                </button>
+                <button class="btn btn-primary actionBtn" data-action="clear">
+                  clear
+                </button>
+              </div>
+              <!-- all action button wrapper ends -->
 
-                        <!-- display results wrapper starts here -->
-                        <div class="displayOutWrap mt-3 d-flex align-items-center">
-                            <!-- single display block start here -->
-                            <div class="single_dis">
-                                <span class="disTitle">Letter Count:</span>
-                                <strong class="letterOutputDisplay"></strong>
-                            </div>
-                            <!-- single display block ends here -->
-
-                            <!-- single display block start here -->
-                            <div class="single_dis pl-3">
-                                <span class="disTitle">Word Count:</span>
-                                <strong class="wordOutputDisplay"></strong>
-                            </div>
-                            <!-- single display block ends here -->
-
-                            <!-- single display block start here -->
-                            <div class="single_dis pl-3">
-                                <span class="disTitle">Line Count:</span>
-                                <strong class="lineOutputDisplay"></strong>
-                            </div>
-                            <!-- single display block ends here -->
-
-                        </div>
-                        <!-- display results wrapper ends here -->
-                        <p class="text-monospace text-info mt-2">Developed By M.h Sajjad Hossain Ripon.</p>
-                        <p class="text-monospace text-info mt-2">Total Visited: <b class="text-dark" id="visits"></b>
-                        </p>
-                    </div>
+              <!-- display results wrapper starts here -->
+              <div class="displayOutWrap mt-3 d-flex align-items-center">
+                <!-- single display block start here -->
+                <div class="single_dis">
+                  <span class="disTitle">Letter Count:</span>
+                  <strong class="letterOutputDisplay"></strong>
                 </div>
+                <!-- single display block ends here -->
+
+                <!-- single display block start here -->
+                <div class="single_dis pl-3">
+                  <span class="disTitle">Word Count:</span>
+                  <strong class="wordOutputDisplay"></strong>
+                </div>
+                <!-- single display block ends here -->
+
+                <!-- single display block start here -->
+                <div class="single_dis pl-3">
+                  <span class="disTitle">Line Count:</span>
+                  <strong class="lineOutputDisplay"></strong>
+                </div>
+                <!-- single display block ends here -->
+              </div>
+              <!-- display results wrapper ends here -->
+              <p class="text-monospace text-info mt-2">
+                Developed By M.h Sajjad Hossain Ripon.
+              </p>
+              <p class="text-monospace text-info mt-2">
+                Total Visited: <b class="text-dark" id="visits"></b>
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
-
 
     <script src="src/js/app.js"></script>
     <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.countapi.xyz/hit/testRepo.com/visits");
-        xhr.responseType = "json";
-        xhr.onload = function () {
-            document.getElementById('visits').innerText = this.response.value;
-
-        }
-        xhr.send();
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://api.countapi.xyz/hit/testRepo.com/visits");
+      xhr.responseType = "json";
+      xhr.onload = function () {
+        document.getElementById("visits").innerText = this.response.value;
+      };
+      xhr.send();
     </script>
-</body>
-
+  </body>
 </html>
